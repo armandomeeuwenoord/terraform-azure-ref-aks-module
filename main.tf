@@ -1,6 +1,9 @@
 provider "azuread" {}
 
-provider "azurerm" {}
+provider "azurerm" {
+  features {}
+  skip_provider_registration = true
+}
 
 data "azurerm_resource_group" "rg" {
   name = "tf-ref-${var.environment}-rg"
