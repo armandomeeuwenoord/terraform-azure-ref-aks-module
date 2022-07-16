@@ -1,10 +1,6 @@
-provider "azuread" {
-  version = "~> 0.7.0"
-}
+provider "azuread" {}
 
-provider "azurerm" {
-  version = "~> 1.39.0"
-}
+provider "azurerm" {}
 
 data "azurerm_resource_group" "rg" {
   name = "tf-ref-${var.environment}-rg"
